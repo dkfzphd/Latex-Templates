@@ -1,0 +1,83 @@
+\documentclass[a4paper,twoside]{report}
+\usepackage{ctex}%中文
+\usepackage[margin=1in]{geometry}
+\setlength\parindent{2em}%段落缩进 首自然段不影响
+\setlength\parskip{1em}%段间距
+\usepackage{zhlipsum}
+\usepackage{lastpage}
+\usepackage{fancyhdr} % for use of \pageref{LastPage}
+
+\fancypagestyle{IHA-fancy-style}{%
+  \fancyhf{}% Clear header and footer
+  \fancyhead[LE,RO]{\slshape \rightmark}
+  \fancyhead[LO,RE]{\slshape \leftmark}
+  \fancyfoot[C]{\thepage\ of \pageref{LastPage}}% Custom footer
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header visible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+
+% Redefine the plain page style
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage\ of \pageref{LastPage}}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+\title{A short example}
+\author{good author}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagestyle{IHA-fancy-style}
+\chapter{A chapter}
+\zhlipsum[1]
+
+\newpage
+
+\section{section1}
+Look at the footer
+\zhlipsum[2-6]
+\subsection{section1}
+Look at the footer
+\zhlipsum[2-6]
+\section{section2}
+Look at the footer
+\zhlipsum[2-6]
+\section{section3}
+Look at the footer
+\zhlipsum[2-6]
+
+
+\chapter{B chapter}
+\zhlipsum[1]
+
+\newpage
+
+\section{section1}
+Look at the footer
+\zhlipsum[2-6]
+\section{section2}
+Look at the footer
+\zhlipsum[2-6]
+\section{section3}
+Look at the footer
+\zhlipsum[2-6]
+
+\chapter{C chapter}
+\zhlipsum[1]
+
+\newpage
+
+\section{section1}
+Look at the footer
+\zhlipsum[2-6]
+\section{section2}
+Look at the footer
+\zhlipsum[2-6]
+\section{section3}
+Look at the footer
+\zhlipsum[2-6]
+
+\end{document}
