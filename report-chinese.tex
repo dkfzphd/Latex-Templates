@@ -1,0 +1,202 @@
+\documentclass[a4paper,11pt]{ctexart}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor={black},breaklinks,citecolor={black}]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{chemfig}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{zhlipsum}
+\usepackage{indentfirst}
+\setlength\parindent{2em}%段落缩进 首自然段不影响
+\setlength\parskip{1em}%段间距
+\usepackage{upgreek}%roman正立upright 希腊字母
+\usepackage{siunitx}% 标准物理单位
+\usepackage{cite} %简介连续引用的问题[4][5][6]变成[4-7]
+\usepackage[most]{tcolorbox}% text tcolorbox package
+\tcbset{colback=black!5!white,colframe=black!65!white} % globe set tcolorbox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% frontpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Lab Report}} % ctrl+B
+\author{My name}
+\date{\today} % ctrl+I
+
+\begin{document}
+\maketitle
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\rule{\textwidth}{1pt}
+\begin{abstract}
+\zhlipsum[2]
+\end{abstract}
+\rule{\textwidth}{1pt}
+\thispagestyle{empty}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 目录
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% chapter 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\setcounter{page}{1}
+\section{Math and other sth IMPORTANT!}
+中文的引\cite{RN865}``\textbf{测试}", "测试", "English", ``english"\\
+BamHI, \textit{m} = $\upmu$g \textit{m} = 5 kg 不建议直接输入会导致分开 μg
+%$\upmu$g μg 单位要用正立的希腊字母 物理量的代表要用斜体 
+\SI{44.9}{\celsius}, \SI{44.9}{\celsius} \SI{}{\ohm}, 100 $\Omega$\\
+because $\because$ therefore $\therefore$
+
+\begin{equation}
+\frac{m_1}{vol_1}=\frac{m_2}{vol_2}
+\label{density}
+\end{equation}
+我们使用公式\eqref{density}可以计算任一缺失参数。% 公式的交叉引用
+$5\times6 = 30$\\
+$6\div5 = 1.2$\\
+Bar plot should be displayed with $mean \pm sd$ \par%plus minus symbol \pm
+
+\begin{equation}
+\sin^2(x)+\cos^2(x) =1
+\end{equation}
+
+$\underbrace{\overbrace{(a+b+c)}^6
+\cdot  \overbrace{(d+e+f)}^7}
+_\text{meaning  of  life}  =  42$
+
+$$\underbrace{\overbrace{(a+b+c)}^6
+\cdot  \overbrace{(d+e+f)}^7}
+_\text{meaning  of  life}  =  42$$\\
+$\underbrace{that\quad is\quad life!}_\text{命运啊，生活啊}$
+
+\begin{equation}
+2CO + O_2\xrightarrow[burning]{fire}  2CO_2  
+\label{CO+O2}
+\end{equation}
+
+公式\eqref{CO+O2}是$CO$燃烧反应方程式
+\subsection{subsection one}
+\zhlipsum[1-2]
+
+\subsubsection{subsubsection one}
+\zhlipsum[1-2]		
+\newpage
+
+\section{Math symbol}
+This is our second document.6 $\mu m$ 
+\chemfig{A-[:50]B-[:-25]C}
+Branched molecule \vspace{.5cm}
+
+\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}
+\quad\chemfig{A-[:50]B-[:-25]C}\vspace{1cm}\\
+
+{ 
+    \setchemfig{atom sep=2em,bond style={line width=1pt,red,dash pattern=on 2pt off 2pt}}  
+    \chemname
+    {\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}}    
+    {Ethanal}
+}\vspace{.5cm}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\textwidth]{Rplot}
+\caption{This is a plot of sin($x$)}
+\end{figure}
+
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{Rplot}
+  \caption{A really Awesome Image}\label{fig:awesome_image1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{Rplot}
+  \caption{A really Awesome Image}\label{fig:awesome_image2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{Rplot}
+  \caption{A really Awesome Image}\label{fig:awesome_image3}
+\endminipage
+\end{figure}
+
+
+$\underbrace{a\Rightarrow b}$
+\section{Statement of the Problem}
+\textit{This is our second document.}\cite{RN853} It contains a title and a 
+section with text.tourists visit London every year\cite{RN869}. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\section{Hypothesis}
+This is our second document. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\section{Materials}
+This is our second document. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+
+\section{Procedure}
+This is our second document. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\section{Result}
+This is our second document. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\section{Conclusion}
+This is our second document. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.\par
+Not by chance London has been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where 1/3 of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.\par
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\section{Comment}
+This is our second document\cite{RN872,RN853,RN863,RN871}. It contains a title and a 
+section with text.tourists visit London every year. The capital city of England and the United Kingdom attracts a lot of visitors, especially Americans. This is probably due to the position it holds in the world economy.
+Not by chance London has \cite{RN942} been defined by some of the most important sociologists of the XX century as a global city. That’s how people and cultures blend together continuously, creating a multicultural place, where $\frac{1}{3}$ of the population is foreign-born. Being a language student, I was impressed when I discovered that over 200 different idioms are spoken in London.
+In my travel itineraries I usually try to focus on some unusual places to visit, because I find them more fascinating than visiting the typical monuments or museums, those which everybody already knows. Thus, here you are my top 5 sites in London
+
+\newpage
+\section{Reference}
+
+\begin{tcolorbox}[title=\textbf{$\ggg$ My nice heading}]
+This  is  another  \textbf{tcolorbox}.
+\tcblower
+Here,  you  see  the  lower  part  of  the  box.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white!95!red,colframe=black!30!red,title=\textbf{$\ggg$ My  nice  heading}]
+$\ggg$ This  is  another with sets  \textbf{tcolorbox}.
+English news is a new education format. You will find articles and news from all over the world. English news is a school newspaper.
+\tcblower
+Here,  you  see  the  lower  part  of  the  box.
+\end{tcolorbox}
+{\setlength{\parindent}{0pt}
+
+\bibliographystyle{unsrt}
+\bibliography{citation}
+}
+\thispagestyle{empty}
+\end{document}
+
